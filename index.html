@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zhenhao 的个人主页">
+  <title>Zhenhao · 个人主页</title>
+  <style>
+    :root { --ink:#172033; --muted:#667085; --paper:#f7f8fc; --accent:#635bff; --line:#e5e7ef; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family: "PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:var(--paper); line-height:1.7; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1060px, calc(100% - 40px)); margin:auto; }
+    header { padding:26px 0; }
+    nav { display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-weight:800; font-size:1.15rem; letter-spacing:.04em; }
+    .logo span { color:var(--accent); }
+    .links { display:flex; gap:26px; color:var(--muted); font-size:.95rem; }
+    .links a:hover { color:var(--accent); }
+    .hero { display:grid; grid-template-columns:1.25fr .75fr; gap:60px; align-items:center; min-height:570px; }
+    .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.12em; font-size:.82rem; }
+    h1 { font-size:clamp(2.8rem, 7vw, 5.8rem); line-height:1.08; margin:16px 0 22px; letter-spacing:-.06em; }
+    h1 em { color:var(--accent); font-style:normal; }
+    .intro { color:var(--muted); font-size:1.1rem; max-width:520px; }
+    .actions { display:flex; gap:14px; margin-top:32px; }
+    .btn { padding:11px 20px; border-radius:10px; border:1px solid var(--line); background:#fff; font-weight:700; }
+    .btn.primary { color:#fff; background:var(--accent); border-color:var(--accent); box-shadow:0 10px 24px #635bff35; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:24px; padding:30px; box-shadow:0 20px 60px #1820440b; }
+    .avatar { width:190px; height:190px; margin:0 auto 24px; border-radius:50%; display:grid; place-items:center; color:#fff; font-size:4.2rem; font-weight:800; background:linear-gradient(135deg,#635bff,#a78bfa); }
+    .card h2 { text-align:center; font-size:1.25rem; }
+    .card p { text-align:center; color:var(--muted); margin-top:5px; }
+    section { padding:72px 0; }
+    .section-title { font-size:2rem; margin-bottom:28px; }
+    .section-title small { display:block; color:var(--accent); font-size:.8rem; letter-spacing:.12em; margin-bottom:6px; }
+    .projects { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .project { padding:24px; border-radius:16px; background:#fff; border:1px solid var(--line); transition:.2s; }
+    .project:hover { transform:translateY(-5px); box-shadow:0 14px 30px #18204412; }
+    .project .icon { font-size:1.8rem; }
+    .project h3 { margin:14px 0 7px; }
+    .project p { color:var(--muted); font-size:.93rem; }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:17px; }
+    .tag { font-size:.78rem; padding:3px 9px; border-radius:20px; color:#5148c8; background:#eeedff; }
+    footer { padding:30px 0 45px; color:var(--muted); font-size:.9rem; border-top:1px solid var(--line); }
+    @media (max-width:760px) { .links { gap:12px; font-size:.82rem; } .hero { grid-template-columns:1fr; gap:30px; padding:55px 0 30px; min-height:auto; } .hero .card { max-width:380px; } .projects { grid-template-columns:1fr; } section { padding:48px 0; } h1 { font-size:3.5rem; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><nav><a class="logo" href="#">ZH<span>.</span></a><div class="links"><a href="#about">关于我</a><a href="#projects">项目</a><a href="#contact">联系</a></div></nav></div></header>
+  <main>
+    <section class="hero wrap" id="about">
+      <div><div class="eyebrow">HELLO, WORLD</div><h1>把想法<br>变成<em>作品。</em></h1><p class="intro">你好，我是 Zhenhao，一名热爱创造的开发者。喜欢用代码解决真实问题，也喜欢在设计与技术的交叉处探索有趣的可能。</p><div class="actions"><a class="btn primary" href="#projects">看看我的项目</a><a class="btn" href="#contact">与我联系</a></div></div>
+      <div class="card"><div class="avatar">Z</div><h2>Zhenhao</h2><p>开发者 · 终身学习者</p></div>
+    </section>
+    <section class="wrap" id="projects"><div class="section-title"><small>SELECTED WORK</small>最近在做什么</div><div class="projects">
+      <article class="project"><div class="icon">🚀</div><h3>效率工具箱</h3><p>一个帮助团队整理日常工作流的小工具，让重复的事情自动完成。</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">Productivity</span></div></article>
+      <article class="project"><div class="icon">🎨</div><h3>灵感收集站</h3><p>记录设计灵感与阅读笔记，练习把复杂的信息整理得简单清晰。</p><div class="tags"><span class="tag">Design</span><span class="tag">Notes</span></div></article>
+      <article class="project"><div class="icon">🌱</div><h3>开源实践</h3><p>持续参与开源项目，在分享和协作中学习更好的工程方法。</p><div class="tags"><span class="tag">Open Source</span><span class="tag">Git</span></div></article>
+    </div></section>
+    <section class="wrap" id="contact"><div class="card"><div class="section-title"><small>LET'S CONNECT</small>保持联系</div><p class="intro">如果你也喜欢创造、学习，或者只是想聊聊一个有趣的想法，欢迎来找我。</p><div class="actions"><a class="btn primary" href="mailto:hello@example.com">hello@example.com</a><a class="btn" href="https://github.com/zhenhao666666" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></section>
+  </main>
+  <footer><div class="wrap">© 2026 Zhenhao · 用好奇心写代码。</div></footer>
+</body>
+</html>
